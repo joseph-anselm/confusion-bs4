@@ -56,14 +56,79 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contactus.html"
+              <a class="nav-link" href="./contactus.html" 0
                 ><span class="fa fa-address-card fa-lg"></span> Contact</a
               >
             </li>
           </ul>
         </div>
+        <span class="navbar-text">
+          <a data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in"></span> Login</a
+          >
+        </span>
       </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputEmail3"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputEmail3"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only" for="exampleInputPassword3"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control form-control-sm mr-1"
+                    id="exampleInputPassword3"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" />
+                    <label class="form-check-label"> Remember me </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm ml-auto"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">
+                  Sign in
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -85,16 +150,262 @@
             class="col-12 col-sm align-self-center justify-content-center m-2"
           >
             <a
-              class="btn btn-warning d-flex justify-content-center btn-block"
+              role="button"
+              class="btn btn-warning d-flex nav-link justify-content-center btn-block"
               href="#reserve"
+              data-toggle="modal"
+              data-target="#reserve"
               >Reserve</a
             >
+
+            <div
+              class="modal fade text-dark"
+              id="reserve"
+              tabindex="-1"
+              role="dialog"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="reserve">
+                      <strong>Reserve A Table</strong>
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row">
+                        <div class="col-3 col-md-3 col-sm-12">
+                          <label>Number of Guests</label>
+                        </div>
+                        <div class="col col-md col-sm">
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio1"
+                              value="option1"
+                            />
+                            <label class="form-check-label" for="inlineRadio1"
+                              >1</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >2</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >3</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >4</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >5</label
+                            >
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="inlineRadioOptions"
+                              id="inlineRadio2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="inlineRadio2"
+                              >6</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mt-4">
+                        <div class="col-3 col-md-3 col-sm-12">
+                          <label class=" ">Section</label>
+                        </div>
+                        <div class="col col-md col-sm">
+                          <div
+                            class="btn-group btn-group-toggle"
+                            data-toggle="buttons"
+                          >
+                            <label class="btn btn-danger active">
+                              <input
+                                type="radio"
+                                name="options"
+                                id="option1"
+                                autocomplete="off"
+                                checked
+                              />
+                              Non-smoking
+                            </label>
+                            <label class="btn btn-success">
+                              <input
+                                type="radio"
+                                name="options"
+                                id="option2"
+                                autocomplete="off"
+                              />
+                              Smoking
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mt-4">
+                        <div class="col-3 col-md-3 col-sm-12">
+                          <label>Date and Time</label>
+                        </div>
+
+                        <div class="col col-md col-sm">
+                          <div class="form-inline">
+                            <div
+                              class="form-group mb-2 d-sm-block input-group-prepend"
+                            >
+                              <label class="sr-only">Date</label>
+                              <input
+                                type="Date"
+                                class="form-control"
+                                placeholder="Date"
+                              />
+                            </div>
+                            <div
+                              class="form-group mx-sm-3 mb-2 d-sm-block input-group-prepend"
+                            >
+                              <label class="sr-only">Time</label>
+                              <input
+                                type="time"
+                                class="form-control"
+                                id="inputPassword2"
+                                placeholder="Time"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="col-10 col-md-10 col-sm-10 offset-2">
+                          <button
+                            class="btn btn-secondary"
+                            data-dismiss="modal"
+                          >
+                            Cancel
+                          </button>
+                          <button class="btn btn-primary">Reserve</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <div class="container">
+      <div class="row row-content">
+        <div class="col">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img
+                  class="d-block img-fluid"
+                  src="img/uthappizza.png"
+                  alt="Uthappizza"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h2>
+                    Uthappizza <span class="badge badge-danger">HOT</span>
+                    <span class="badge badge-pill badge-default">$4.99</span>
+                  </h2>
+                  . . .
+                </div>
+              </div>
+              <div class="carousel-item">. . .</div>
+              <div class="carousel-item">. . .</div>
+
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#mycarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li data-target="#mycarousel" data-slide-to="1"></li>
+                <li data-target="#mycarousel" data-slide-to="2"></li>
+              </ol>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#mycarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#mycarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </a>
+            <div class="btn-group" id="carouselButton">
+              <button class="btn btn-danger btn-sm" id="carousel-pause">
+                <span class="fa fa-pause"></span>
+              </button>
+              <button class="btn btn-danger btn-sm" id="carousel-play">
+                <span class="fa fa-play"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 col-md-3 order-sm-last">
           <h3>Our Lipsmacking Culinary Creations</h3>
@@ -176,121 +487,6 @@
       </div>
     </div>
 
-    <div class="container mt-4 mb-4" id="reserve">
-      <div>
-        <div class="col-8 col-sm-8 col-md-8 mx-auto">
-          <div class="card">
-            <div class="card-header bg-warning">Reserve a table</div>
-            <div class="card-body">
-              <form>
-                <div class="row">
-                  <span class="mr-3 col-12 col-md-3 col-sm-3"
-                    ><strong>Number of Guests</strong></span
-                  >
-                  <div class="ml-3">
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="inlineRadioOptions"
-                        id="inlineRadio1"
-                        value="option1"
-                      />
-                      <label class="form-check-label" for="inlineRadio1"
-                        >1</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="inlineRadioOptions"
-                        id="inlineRadio2"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineRadio2"
-                        >2</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="inlineRadioOptions"
-                        id="inlineRadio2"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineRadio2"
-                        >3</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="inlineRadioOptions"
-                        id="inlineRadio2"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineRadio2"
-                        >4</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="inlineRadioOptions"
-                        id="inlineRadio2"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineRadio2"
-                        >5</label
-                      >
-                    </div>
-                    <div class="form-check form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="inlineRadioOptions"
-                        id="inlineRadio2"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineRadio2"
-                        >6</label
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="form-inline mt-4">
-                  <span><strong>Date and Time</strong></span>
-                  <div class="form-group mx-sm-3 mb-2 d-sm-block">
-                    <label class="sr-only">Date</label>
-                    <input
-                      type="Date"
-                      class="form-control"
-                      placeholder="Date"
-                    />
-                  </div>
-                  <div class="form-group mx-sm-3 mb-2 d-sm-block">
-                    <label class="sr-only">Time</label>
-                    <input
-                      type="time"
-                      class="form-control"
-                      id="inputPassword2"
-                      placeholder="Time"
-                    />
-                  </div>
-                </div>
-
-                <a href="#" class="btn btn-primary mt-5">Reserve</a>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -348,7 +544,7 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-3">
           <div class="col-auto">
             <p>© Copyright 2018 Ristorante Con Fusion</p>
           </div>
@@ -371,5 +567,21 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#mycarousel").carousel({ interval: 2000 });
+        $("#carousel-pause").click(function () {
+          $("#mycarousel").carousel("pause");
+        });
+        $("#carousel-play").click(function () {
+          $("#mycarousel").carousel("cycle");
+        });
+      });
+    </script>
   </body>
 </html>
